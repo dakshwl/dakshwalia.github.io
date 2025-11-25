@@ -1,0 +1,382 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #1a365d;
+    --secondary-color: #2c5282;
+    --accent-color: #4299e1;
+    --text-color: #2d3748;
+    --light-text: #718096;
+    --background-color: #ffffff;
+    --section-bg: #f7fafc;
+    --border-color: #e2e8f0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Navigation */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Hero Section */
+#hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: #ffffff;
+    padding: 2rem;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: normal;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Section Styles */
+section {
+    padding: 5rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+section:nth-child(even) {
+    background-color: var(--section-bg);
+    max-width: none;
+}
+
+section:nth-child(even) > * {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--accent-color);
+    font-weight: normal;
+}
+
+/* About Section */
+.about-content p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+/* CV Section */
+.cv-content {
+    padding: 1rem 0;
+}
+
+.cv-section {
+    margin-bottom: 2rem;
+}
+
+.cv-section h3 {
+    font-size: 1.3rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-weight: normal;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.cv-item {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cv-date {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.9rem;
+    color: var(--light-text);
+    min-width: 100px;
+}
+
+.cv-details p {
+    color: var(--light-text);
+    font-size: 0.95rem;
+}
+
+.cv-section ul {
+    list-style-position: inside;
+    color: var(--text-color);
+}
+
+.cv-section li {
+    margin-bottom: 0.5rem;
+}
+
+.download-cv {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.95rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.download-cv:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Research Section */
+.research-content {
+    display: grid;
+    gap: 2rem;
+}
+
+.research-item {
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.research-item h3 {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.75rem;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.placeholder-text {
+    color: var(--light-text);
+    font-style: italic;
+}
+
+/* Coding Section */
+.coding-content > p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.coding-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.coding-item {
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.coding-item h3 {
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.75rem;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.github-link {
+    text-align: center;
+}
+
+.github-link a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.github-link a:hover {
+    color: var(--primary-color);
+}
+
+/* Writing Section */
+.writing-content > p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.writing-items {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.writing-item {
+    padding: 1.5rem;
+    border-left: 4px solid var(--accent-color);
+    background-color: #ffffff;
+}
+
+.writing-item h3 {
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.75rem;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Contact Section */
+.contact-content {
+    text-align: center;
+}
+
+.contact-content > p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.contact-info {
+    display: inline-block;
+    text-align: left;
+}
+
+.contact-info p {
+    margin-bottom: 0.75rem;
+}
+
+.contact-info a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    section {
+        padding: 3rem 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .cv-item {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .cv-date {
+        min-width: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .nav-links {
+        font-size: 0.85rem;
+    }
+
+    .coding-projects {
+        grid-template-columns: 1fr;
+    }
+}
